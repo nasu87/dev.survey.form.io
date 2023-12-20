@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Survey Form</title>
+    <style>
+        .dev {
+            /* background-color: grey; */
+            background-color: rgb(148, 179, 199);
+
+            height: 120px;
+            box-shadow: 0px 0px 20px rgb(13, 245, 233);
+            border: 2px solid black;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .dev:hover {
+            box-shadow: 0px 0px 20px rgb(210, 17, 228);
+            border: 2px solid rgb(255, 255, 255);
+
+
+        }
+
+        h2 {
+
+            font-family: cursive;
+            text-shadow: 0px 0px 10px rgb(255, 255, 255);
+            padding-left: 10px;
+        }
+
+        .nasu {
+            display: flex;
+            justify-content: center;
+            padding-top: 75px;
+            padding-right: 10px;
+        }
+
+        .nasu a {
+            font: 1em sans-serif;
+            text-shadow: 0px 0px 10px rgb(74, 76, 201);
+
+            text-decoration: none;
+        }
+
+        .f-1 {
+            padding-top: 20px;
+        }
+
+        .dev-1 {
+
+            padding-left: 20px;
+            font-family: cursive;
+        }
+
+        .phase-1 {
+            border: 2px solid black;
+            align-items: center;
+            display: grid;
+
+            justify-content: center;
+            align-items: center;
+
+            background-color: rgb(148, 179, 199);
+            height: 300px;
+            border-radius: 10px;
+
+        }
+
+        .fill-name {
+            /* display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center; */
+
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+
+
+        .f-name,
+        .c-name,
+        .p-name,
+        .e-name {
+            padding: 10px;
+
+
+
+        }
+
+        .l-1,
+        .l-2,
+        .l-3,
+        .l-4 {
+            border: 1px solid rgb(0, 0, 0);
+            height: 20px;
+            border-radius: 4px;
+            width: 200px;
+
+        }
+
+        .l-1::placeholder,
+        .l-2::placeholder,
+        .l-3::placeholder,
+        .l-4::placeholder {
+            font-family: cursive;
+            color: rgb(5, 5, 5);
+        }
+
+        .l-1,
+        .l-2,
+        .l-3,
+        .l-4 {
+            box-shadow: 0px 0px 20px rgb(17, 221, 228);
+            border: 2px solid rgb(255, 255, 255);
+
+        }
+
+        .l-1:hover,
+        .l-2:hover,
+        .l-3:hover,
+        .l-4:hover {
+            box-shadow: 0px 0px 20px rgb(216, 30, 145);
+            border: 2px solid rgb(8, 8, 8);
+
+        }
+
+        .gen {
+            margin-top: 10px;
+            padding: 0px;
+            font-family: sans-serif;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            background-color: rgb(148, 179, 199);
+            border: 2px solid black;
+            padding-left: 20px;
+
+
+        }
+
+        .male {
+            padding-top: -10px;
+            font-family: cursive !important;
+        }
+
+        .female {
+            padding-top: -10px;
+            font-family: cursive !important;
+
+        }
+
+        .phase-2 {
+            margin-top: 10px;
+            padding: 0px;
+            font-family: sans-serif;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            background-color: rgb(148, 179, 199);
+            border: 2px solid black;
+            padding-left: 20px;
+            height: 250px;
+            padding: 20px;
+
+        }
+
+        .c-b div {
+            padding: 10px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 10px;
+            justify-content: space-around;
+
+
+
+            padding-right: 10px;
+
+        }
+
+        .lab-1 {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .phase-3 {
+            margin-top: 10px;
+            padding: 0px;
+            font-family: sans-serif;
+            padding-bottom: 10px;
+            border-radius: 10px;
+            background-color: rgb(148, 179, 199);
+            border: 2px solid black;
+            padding-left: 20px;
+            height: 450px;
+            padding: 20px;
+        }
+
+        .btn {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            border-radius: 10px;
+            align-items: center;
+            background-color: rgb(148, 179, 199);
+            border: 2px solid black;
+            height: 40px;
+            padding: 20px;
+        }
+
+        .re1 {
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 7px;
+            margin-right: 40px;
+            height: 40px;
+            width: 100px;
+            color: white;
+            background-color: black;
+            font-family: monospace;
+            box-shadow: 0px 0px 10px 10px rgb(70, 139, 185);
+        }
+
+        .re1:hover {
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(0, 0, 0);
+            background-color: rgb(90, 236, 236);
+            box-shadow: 0px 0px 20px 10px rgb(255, 255, 255);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .sub1 {
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 7px;
+            margin-right: 40px;
+            height: 40px;
+            width: 100px;
+            color: white;
+            background-color: black;
+            font-family: monospace;
+            box-shadow: 0px 0px 10px 10px rgb(70, 139, 185);
+        }
+
+        .sub1:hover {
+            color: rgb(0, 0, 0);
+            border: 2px solid rgb(0, 0, 0);
+            background-color: rgb(90, 236, 236);
+            box-shadow: 0px 0px 20px 10px rgb(255, 255, 255);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .foot {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            border-radius: 10px;
+            align-items: center;
+            background-color: rgb(148, 179, 199);
+            border: 2px solid black;
+            height: 90px;
+            padding: 15px;
+            text-decoration: none;
+        }
+
+        .foot a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: x-large;
+            margin-right: 0px;
+            text-shadow: 0px 0px 10px rgb(236, 19, 153);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .foot a:hover {
+            color: brown;
+            text-shadow: 0px 0px 10px rgb(19, 138, 236);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dev">
+        <h2>
+            Developer Survey Form
+        </h2>
+        <div class="nasu">
+            <a href="#">By Nasir</a>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <form class="f-1" action="">
+        <div class="phase-1">
+            <div class="dev-1">
+                <p>Developer Detail </p>
+            </div>
+            <div class="fill-name">
+                <div class="f-name">
+                    <input class="l-1" type="text" name="" id="n-ame" placeholder="Full Name">
+                    <label for="n-ame"></label>
+                </div>
+                <div class="c-name">
+                    <input class="l-2" type="text" name="" id="country" placeholder="Country">
+                    <label for="country"></label>
+                </div>
+                <div class="p-name">
+                    <input class="l-3" type="number" name="phone number" id="phone-no" placeholder="Phone">
+                    <label for="phone-no"></label>
+                </div>
+                <div class="e-name">
+                    <input class="l-4" type="email" name="email" id="e-mail" placeholder="Email">
+                    <label for="e-mail"></label>
+                </div>
+            </div>
+
+        </div>
+        <div class="gen">
+            <p>Gender:</p>
+            <input type="radio" name="gender" id="male-1">
+            <label class="male" for="male-1">Male</label><br>
+
+            <input type="radio" name="gender" id="female-1">
+            <label class="female" for="female-1">Female</label>
+
+        </div>
+        <div class="phase-2">
+            <div class="para">
+                <p>Technologies</p>
+            </div>
+            <div class="c-b">
+                <div class="lab-1">
+                    <span class="l1">
+                        <input type="checkbox" name="html" id="html">
+                        <label for="html">HTML</label>
+                    </span>
+
+                    <span class="l2">
+                        <input type="checkbox" name="css" id="css">
+                        <label for="css">CSS</label>
+                    </span>
+                    <span class="l3">
+                        <input type="checkbox" name="js" id="js">
+                        <label for="js">JavaScript</label>
+                    </span>
+                </div>
+                <div>
+                    <span class="l4">
+                        <input type="checkbox" name="bootstrap" id="bootstrap">
+                        <label for="bootstrap">Bootstrap</label>
+                    </span>
+                    <span class="l5">
+                        <input type="checkbox" name="tail" id="tail">
+                        <label for="tail">Tailwind Css</label>
+                    </span>
+                    <span class="l6">
+                        <input type="checkbox" name="njs" id="njs">
+                        <label for="njs">Node.Js</label>
+                </div>
+
+                <div>
+                    <span class="l6"> <input type="checkbox" name="git" id="git">
+                        <label for="git">Github</label></span>
+
+                    <span class="l6"><input type="checkbox" name="py" id="py">
+                        <label for="py">Python</label></span>
+
+                    <span class="l6"><input type="checkbox" name="java" id="java">
+                        <label for="java">Java</label></span>
+
+                </div>
+                <div>
+                    <span class="l6"> <input type="checkbox" name="c" id="c">
+                        <label for="c">C++</label></span>
+
+                    <span class="l6"><input type="checkbox" name="fig" id="fig">
+                        <label for="fig">Figma</label></span>
+
+                    <span class="l6"><input type="checkbox" name="db" id="db">
+                        <label for="db">Database</label></span>
+
+                </div>
+            </div>
+        </div>
+        <div class="phase-3">
+            <div class="q-1">
+                <p>Q 1 : Have you used ChatGpt in your project ?</p>
+                <input type="radio" name="one" value="y1" id="q1">
+                <label for="q1">Yes</label>
+
+                <input type="radio" name="one" value="n1" id="q2">
+                <label for="q2">No</label>
+            </div>
+            <div class="q-2">
+                <p>Q 2 : Do you manage Database ?</p>
+                <input type="radio" name="two" value="y2" id="yes">
+                <label for="yes">Yes</label>
+
+                <input type="radio" name="two" value="n2" id="no">
+                <label for="no">No</label>
+            </div>
+            <div class="q-3">
+                <p>Q 3 : Are you Ready for Back-End projects ? </p>
+                <input type="radio" name="three" id="y3">
+                <label for="y3">Yes</label>
+
+                <input type="radio" name="three" id="no">
+                <label for="no">No</label>
+            </div>
+            <div class="q-4">
+                <p>Q 4 : Have you knowledge about android development ? </p>
+                <input type="radio" name="four" id="yes">
+                <label for="yes">Yes</label>
+
+                <input type="radio" name="four" id="no">
+                <label for="no">No</label>
+            </div>
+            <div class="q-5">
+                <p>Q 5 : This job is 9-5 are you comfortable with this </p>
+                <input type="radio" name="five" id="yes">
+                <label for="yes">Yes</label>
+
+                <input type="radio" name="five" id="no">
+                <label for="no">No</label>
+            </div>
+        </div>
+        <div class="btn">
+    </form>
+    <div class="re">
+        <a href="#"> <button class="re1" type="reset">Reset</button></a>
+    </div>
+    <div class="sub">
+        <a href="#"><button class="sub1" type="submit">Submit</button></a>
+    </div>
+    </div>
+    <footer>
+        <div class="foot">
+            <h1>Click my Instagram➡️</h1>
+            <div> <a href="https://www.instagram.com/na_su87/">na_su87 </a>
+            </div>
+            <h3>🖤</h3>
+            <div>
+                <a href="https://www.instagram.com/na_su87/">web.dev3 </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
